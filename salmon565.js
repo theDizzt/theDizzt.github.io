@@ -37,10 +37,17 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
+	// 레이어_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.lf(["#FF0000","#FFFF00","#00FF00","#00FFFF","#0000FF","#FF00FF","#FF0000"],[0,0.165,0.365,0.498,0.667,0.831,1],-300.1,0,299.9,0).s().p("Egu3AjKMAAAhGTMBdvAAAMAAABGTg");
+	this.shape.setTransform(300,225);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,0,0);
+p.nominalBounds = new cjs.Rectangle(300,225,300,225);
 // library properties:
 lib.properties = {
 	id: '73A9657082B32B46AA218731E1D24127',
